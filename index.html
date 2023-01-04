@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="debbugging" onclick="newEnemy()">Generate random enemy</button>
+    <button id="debbugging" onclick="consoleLog()">Console Log stats</button>
+    <Button onclick='start()' id="start"><h1>Start Game</h1></Button>
+    <div id="class">
+            <h1>Choose class</h1>
+            <button onclick="classWarrior()">Warrior</button>
+            <button onclick="classRanger()">Ranger</button>
+            <button onclick="classMage()">Mage</button>
+    </div>
+    <div id="game">
+        <div id="player">
+            <div id="playerHP"></div>
+        </div>
+        <div id="enemy">
+            <div id="enemyHP"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
