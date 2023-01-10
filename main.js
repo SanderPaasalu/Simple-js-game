@@ -26,6 +26,11 @@ function newEnemy(){
     enemySpellP = enemy1.spellPower;
 }
 
+function beginTheFun()
+{
+    // display the info of player and enemy
+}
+
 // function to test console log values to see if they are what they should be and change as needed
 function consoleLog(){
     newEnemy();
