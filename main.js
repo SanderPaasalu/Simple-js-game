@@ -79,7 +79,7 @@ class Enemy{
         return this.health;
     }
 
-    get attackPower(){
+    get attackP(){
         return this.attack;
     }
 
