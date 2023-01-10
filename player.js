@@ -11,14 +11,6 @@ const ranger=[50,50,50]
 const Mage=[25,100,100]
 // Variable for storing players class
 let playerClass;
-// function for starting the game
-function start(){
-    console.log('I have been called in HTML')
-    var startGame = document.getElementById('start');
-    var chooseClass = document.getElementById('class');
-    chooseClass.style.display = "block";
-    startGame.style.display = "none";
-}
 // function for advancing forward from class page
 function classChosen(){
     var chooseClass = document.getElementById('class');
