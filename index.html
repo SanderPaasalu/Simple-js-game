@@ -23,20 +23,21 @@
     </div>
     
     <div id="game">
-        
-
         <div id="player">
             <H1>Player</H1>
             <div id="playerHP"></div>
             <div id="playerMana"></div>
             <button id="spellList" onclick="">Spell List</button>
-            <button onclick="">Attack!</button>
+            <button onclick="attackEnemy()">Attack!</button>
         </div>
         <div id="enemy">
             <H1>Enemy</H1>
             <div id="enemyHP"></div>
-            <div id="enemyMana"></div>
-            
+            <div id="enemyMana"></div>    
+        </div>
+        <div id="enemyDestroyed">
+            <H1>Enemy has been annihilated!</H1>
+            <button onclick="KILLED()">Another one for the slaughter!</button>
         </div>
     </div>
     <script src="player.js"></script>

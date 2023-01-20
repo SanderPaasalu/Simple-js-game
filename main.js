@@ -6,6 +6,8 @@ var game = document.getElementById('game');
 var startGame = document.getElementById('start');
 var beginButton = document.getElementById('beginTheFun');
 var debugging = document.getElementById('debugging');
+var deadEnemy = document.getElementById('enemyDestroyed');
+var enemyView = document.getElementById('enemy');
 // function for starting the game
 function start(){
     prep.style.display = "block";
@@ -13,12 +15,12 @@ function start(){
 }
 
 // function to make enemy and store their default stat values
-let enemyHp;
+let enemyHp = 0;
 let enemyAttack;
 let enemyMana;
 let enemySpellP
 function newEnemy(){
-    enemy1.setAttack(50);
+    enemy1.setAttack(10);
     enemy1.setHealth(100);
     enemy1.setMana(50);
     enemy1.setSpellPower(50);
@@ -28,6 +30,7 @@ function newEnemy(){
     enemySpellP = enemy1.spellPower;
 }
 
+// function Loads stats, creates enemy, begins game
 function beginTheFun()
 {
     // Generate first enemy of the game
@@ -47,11 +50,32 @@ function beginTheFun()
     
 }
 
+function attackEnemy(){
+    console.log('Attacked the enemy!');
+    enemyHp = enemyHp - attackPower;
+    if(enemyHp>0){
+        document.getElementById('enemyHP').innerHTML = `HP ${enemyHp}`;
+    } else if(enemyHp<=0){
+        enemyView.style.display = 'none';
+        deadEnemy.style.display = 'block';
+    }
+}
+
+function KILLED(){
+    if(enemyView.style.display === 'none'){
+        enemyView.style.display = 'block';
+        deadEnemy.style.display = 'none';  
+        newEnemy();
+        document.getElementById('enemyHP').innerHTML = `HP ${enemyHp}`;
+        document.getElementById('enemyMana').innerHTML = `Mana ${enemyMana}`;
+    }else{
+        console.log("No more innocents to kill, I'm afraid");
+    }
+}
 
 // DEBUGGING/CHEAT OPTIONS
 // function to test console log values to see if they are what they should be and change as needed
 function consoleLog(){
-    newEnemy();
     console.log('Player stats: \n HP: ' + currentHP + ' attackPower: ' + attackPower + ' mana: ' + mana + ' spellPower: ' + spellPower);
     console.log('Enemy stats: \n HP: ' + enemyHp+ ' attackPower: ' + enemyAttack + ' mana: ' + enemyMana + ' spellPower: ' + enemySpellP);
     console.log();
