@@ -13,10 +13,7 @@ const Mage=[25,100,100]
 let playerClass;
 // function for advancing forward from class page
 function classChosen(){
-    var chooseClass = document.getElementById('class');
-    chooseClass.style.display = "none";
-    var game = document.getElementById('game')
-    game.style.display = "block";
+    beginButton.style.display = "block";
 }
 // functions for choosing class
 function classWarrior(){
