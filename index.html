@@ -8,24 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="debbugging" onclick="newEnemy()">Generate random enemy</button>
-    <button id="debbugging" onclick="consoleLog()">Console Log stats</button>
-    <Button onclick='start()' id="start"><h1>Start Game</h1></Button>
-    <div id="class">
-            <h1>Choose class</h1>
-            <button onclick="classWarrior()">Warrior</button>
-            <button onclick="classRanger()">Ranger</button>
-            <button onclick="classMage()">Mage</button>
+    <div id="debugging">
+        <button onclick="newEnemy()">Generate random enemy</button>
+        <button onclick="consoleLog()">Console Log stats</button>
     </div>
+    <Button onclick='start()' id="start"><h1>Start Game</h1></Button>
+    <div id="prep">
+            <h1>Choose class</h1>
+            <button class="class" onclick="classWarrior()">Warrior</button>
+            <button class="class" onclick="classRanger()">Ranger</button>
+            <button class="class" onclick="classMage()">Mage</button>
+            <button id="beginTheFun" onclick="beginTheFun()">Begin The Fun!</button>
+    </div>
+    
     <div id="game">
+        
+
         <div id="player">
+            <H1>Player</H1>
             <div id="playerHP"></div>
             <div id="playerMana"></div>
-            <button id="spellList">Spell List</button>
+            <button id="spellList" onclick="">Spell List</button>
+            <button onclick="">Attack!</button>
         </div>
         <div id="enemy">
+            <H1>Enemy</H1>
             <div id="enemyHP"></div>
             <div id="enemyMana"></div>
+            
         </div>
     </div>
     <script src="player.js"></script>
