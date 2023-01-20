@@ -1,16 +1,15 @@
 body{
     display: block;
+    text-align: center;
 }
 
-#prep, #beginTheFun, #enemyDestroyed{
+#prep, #beginTheFun, #enemyDestroyed, #debugging, #game{
     display: none;
 }
 
-#game {
-    display: none;
-    align-content: center;
+#hiad{
+    font-weight: bolder;
+    font-size: xx-large;
+    color: red;
 }
 
-#debugging{
-    display: none;
-}

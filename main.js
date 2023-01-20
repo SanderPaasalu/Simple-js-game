@@ -51,13 +51,17 @@ function beginTheFun()
 }
 
 function attackEnemy(){
-    console.log('Attacked the enemy!');
     enemyHp = enemyHp - attackPower;
     if(enemyHp>0){
         document.getElementById('enemyHP').innerHTML = `HP ${enemyHp}`;
-    } else if(enemyHp<=0){
+    } else if(enemyHp<=0 && enemyHp>-500){
         enemyView.style.display = 'none';
         deadEnemy.style.display = 'block';
+    } else if(enemyHp <= -500){
+        document.querySelector('#attackbtn').disabled = true;
+        const hiad = document.querySelector('#hiad');
+        hiad.innerHTML = 'You destroyed the enemy body, there is nothing more to attack!'
+        hiad.style.display = 'block';
     }
 }
 
