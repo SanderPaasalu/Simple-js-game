@@ -1,7 +1,16 @@
-#class{
+body{
+    display: block;
+}
+
+#prep, #beginTheFun{
     display: none;
 }
 
-#game{
+#game {
+    display: none;
+    align-content: center;
+}
+
+#debugging{
     display: none;
 }
