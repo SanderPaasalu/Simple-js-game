@@ -47,6 +47,8 @@ function beginTheFun()
     
 }
 
+
+// DEBUGGING/CHEAT OPTIONS
 // function to test console log values to see if they are what they should be and change as needed
 function consoleLog(){
     newEnemy();
@@ -63,4 +65,8 @@ function openDebugging(){
 // debugging menu close
 function closeDebugging(){
     debugging.style.display = 'none';
+}
+
+function killEnemy(){
+    enemyHp -= 10000
 }
