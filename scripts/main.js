@@ -1,4 +1,5 @@
 let score = 0;
+let skulls;
 let enemy1 = new Enemy();
 // game stages/elements that are initialy hidden
 var prep = document.getElementById('prep');
@@ -79,7 +80,7 @@ function KILLED(){
         document.getElementById('enemyHP').innerHTML = `HP ${enemyHp}`;
         document.getElementById('enemyMana').innerHTML = `Mana ${enemyMana}`;
     }else{
-        console.log("No more innocents to kill, I'm afraid");
+        console.log("No more alive creatures to kill, I'm afraid");
     }
 }
 
