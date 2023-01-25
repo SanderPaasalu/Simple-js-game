@@ -49,7 +49,10 @@ function beginTheFun()
     document.getElementById('enemyMana').innerHTML = `Mana ${enemyMana}`;
     
 }
-
+// variable related to attack button
+var attackBTN = document.querySelector('#attackbtn');
+const hiad = document.querySelector('#hiad');
+// function for attacking enemy
 function attackEnemy(){
     enemyHp = enemyHp - attackPower;
     if(enemyHp>0){
@@ -58,14 +61,17 @@ function attackEnemy(){
         enemyView.style.display = 'none';
         deadEnemy.style.display = 'block';
     } else if(enemyHp <= -500){
-        document.querySelector('#attackbtn').disabled = true;
-        const hiad = document.querySelector('#hiad');
+        attackBTN.disabled = true;
         hiad.innerHTML = 'You destroyed the enemy body, there is nothing more to attack!'
         hiad.style.display = 'block';
     }
 }
-
+// function for when enemy has been killed and new one appears
 function KILLED(){
+    if(attackBTN.disabled == true){
+        attackBTN.disabled = false;
+        hiad.style.display = 'none';
+    }
     if(enemyView.style.display === 'none'){
         enemyView.style.display = 'block';
         deadEnemy.style.display = 'none';  
